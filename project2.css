@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+ body {
+  height: 100vh;
+  margin: 0;
+  background: repeating-conic-gradient(
+    from 0deg at center,
+    rgb(2, 0, 17) 0deg 5deg,
+    transparent 18deg 22deg
+  ),
+  radial-gradient(circle at center, #080424, #090025);
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tv {
+  position: relative;
+  padding: 7px 9px;
+  border: 2px solid #3f0357; 
+  border-left: none;  
+  border-bottom: none; 
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tv::before,
+.tv::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background: #3f0357;
+  top: -16px;
+  left: 50%;
+}
+ 
+.tv::before {
+  transform: translatex(-6px) rotate(-30deg);
+  box-shadow: 0-3px 0 1px #3f0357;
+  border-radius: 50%;
+
+}
+
+.tv::after {
+  transform: translatex(5px) rotate(30deg);
+  box-shadow: 0-3px 0 1px #3f0357;
+  border-radius: 50%;
+}
+
+
+.tv .iptv {
+  color: white;
+  font-weight: 200; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+
+.smarters {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+.right {
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-self: center;
+  gap: 6px;
+}
+.right .time {
+  
+  font-weight: 12px;
+  font-size: 20px;
+}
+.right .date {
+  font-weight: 9;
+  font-size: 14px;
+} 
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  
+}
+
+.status-icons .dot  {
+  width: 30px;
+  height: 30px;
+  background: #00ff00;
+  border-radius: 50%;
+  align-items: center;
+  
+  
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 100px;
+  gap: 15px;
+}
+
+
+.card {
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 40px;
+  font-weight: 20px;
+  color: white;
+}
+
+
+.live {
+  background: linear-gradient(190deg, #12dd6d, #230357);
+  grid-row: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  
+
+}
+
+.movies {
+  background: linear-gradient(80deg, #e40303, #eedf0a);
+  width: 400px;
+  
+}
+
+.series {
+  background: linear-gradient(100deg, #e13ff3, #0b70c4);
+  width: 500;
+}
+
+
+
+.small-buttons{
+    grid-column: 2 / 4;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+}
+.small-buttons .small {
+    flex: 1;
+    background: #0b682a;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 19px;
+    gap: 10px;
+    color: white;
+    padding: 11px 19px;
+}
+.card span {
+  font-size: 80px;
+  filter: grayscale(1) brightness(0) invert(1);
+  
+}
+
+
+i {
+  color: white;
+}
+
+.status-icons i {
+  font-size: 20px;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+.card i {
+  font-size: 60px;
+}
+
+
+.play-btn {
+  width: 90px;
+  height: 90px;
+  border: 3px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.small i {
+  font-size: 20px;
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.8;
+}
